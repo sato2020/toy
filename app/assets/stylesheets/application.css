@@ -1,0 +1,133 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* タイトルのネオン */
+
+ .neonText {
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #072bc9,
+      0 0 82px #3ed7f1,
+      0 0 92px #3ed7f1,
+      0 0 102px #072bc9,
+      0 0 151px #072bc9;
+}
+  
+body {
+  font-size: 18px;
+  font-family: "Anders";
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}  
+
+h1, h2, h3, h4 {
+  text-align: center;
+  font-weight: 400;
+}
+  
+h1, h3 {
+  animation: pulsate 0.11s ease-in-out infinite alternate;     
+}
+
+h1 {
+    font-size: 2.2rem; 
+}
+  
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.0rem;
+}
+
+.header{
+  display: flex;
+}
+
+.left-header{
+  position: absolute;
+  margin-left: 20px;
+  z-index: 100;
+}
+
+.left-header, h1{
+  margin-bottom: 10px;
+}
+
+.left-header, h3{
+  margin-top: 20px;
+}
+
+@keyframes pulsate {
+    
+  100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #072bc9,
+      0 0 80px #3ed7f1,
+      0 0 90px #3ed7f1,
+      0 0 100px #072bc9,
+      0 0 150px #072bc9;
+  
+  }
+  
+  0% {
+
+    text-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px #072bc9,
+    0 0 73px #3ed7f1,
+    0 0 80px #3ed7f1,
+    0 0 94px #072bc9,
+    0 0 140px #072bc9;
+  }
+}
+
+/* タイトルのネオン終わり */
+
+/* 雪のエフェクト */
+
+html,body{
+	height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js{ 
+	position:fixed;/*描画固定*/
+	z-index:30;/*描画を一番下に*/
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0);/*背景色*/
+}
+
+#wrapper{
+	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width:100%;
+	height: 100%;
+}
+
+/* 雪のエフェクト終わり */
+

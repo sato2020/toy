@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toy</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+  <body> 
+  <div id="particles-js"></div>
+  <div id="wrapper">
+  <header>
+      <div class = "left-header">
+
+        <h1 class="neonText">
+          Amateur Photo Studio<br><h3 class="neonText"> photo by 白兎兎</h3>
+        </h1>
+
+      </div>
+      <div class = "right-header">
+      <div>
+  </header>
+    <%= yield %>
+    </div>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <%= javascript_pack_tag 'snow' %>
+  </body>
+</html>

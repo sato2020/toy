@@ -1,0 +1,31 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom_img{
+  width: 100vw;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+
+  animation: fadeIn 7s ease 1s 1 normal;
+}
+
+.introduction{
+  margin-top: 250px;
+  position: relative;
+  z-index: 20;
+  font-family: "ロンド B";
+  color: azure;
+  text-shadow:
+  0 0 3px #fff,
+  0 0 7px rgb(0, 4, 255),
+  0 0 9px rgb(0, 132, 255)
+}
+
+@keyframes fadeIn { /*animation-nameで設定した値を書く*/
+    0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+    100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+}
